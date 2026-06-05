@@ -1,1 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lesson 3 — Is adolescence universal? | Year 11 Society & Culture</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.44.0/tabler-icons.min.css">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,-apple-system,sans-serif;background:#f5f5f3;color:#1a1a18;line-height:1.6}
+.page{max-width:720px;margin:0 auto;padding:2rem 1.25rem}
+.relief-banner{background:#FFF8E6;border:1px solid #FAC775;border-radius:12px;padding:1rem 1.25rem;margin-bottom:1.5rem;display:flex;gap:10px;align-items:flex-start}
+.relief-banner i{color:#854F0B;font-size:20px;flex-shrink:0;margin-top:2px}
+.relief-label{font-size:11px;font-weight:600;color:#854F0B;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:4px}
+.relief-text{font-size:13px;color:#633806;line-height:1.6}
+.top-bar{background:#fff;border:1px solid #e0dfd8;border-radius:12px;padding:1rem 1.25rem;margin-bottom:1rem;display:flex;align-items:center;gap:12px}
+.top-icon{width:42px;height:42px;border-radius:10px;background:#EEEDFE;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.top-icon i{font-size:22px;color:#534AB7}
+.top-title{font-size:16px;font-weight:600;color:#1a1a18;margin-bottom:2px}
+.top-sub{font-size:13px;color:#6b6b68}
+.progress-row{display:flex;gap:6px;margin-bottom:1.5rem}
+.prog-step{flex:1;height:5px;border-radius:3px;background:#e0dfd8;transition:background 0.3s}
+.prog-step.done{background:#1D9E75}
+.prog-step.active{background:#7F77DD}
+.section-card{background:#fff;border:1px solid #e0dfd8;border-radius:12px;overflow:hidden;margin-bottom:1.25rem}
+.section-header{padding:0.875rem 1.25rem;border-bottom:1px solid #e0dfd8;display:flex;align-items:center;gap:10px}
+.section-num{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;flex-shrink:0}
+.s1 .section-num{background:#EEEDFE;color:#3C3489}
+.s2 .section-num{background:#E1F5EE;color:#085041}
+.s3 .section-num{background:#FAECE7;color:#712B13}
+.s4 .section-num{background:#E6F1FB;color:#0C447C}
+.s5 .section-num{background:#FAEEDA;color:#633806}
+.section-title{font-size:14px;font-weight:600;color:#1a1a18;flex:1}
+.section-time{font-size:12px;color:#9b9b98}
+.section-body{padding:1.25rem}
+.prose{font-size:14px;color:#444441;line-height:1.75;margin-bottom:1rem}
+.key-idea{background:#f5f5f3;border-left:3px solid #7F77DD;padding:0.875rem 1rem;margin-bottom:1rem}
+.key-idea-label{font-size:11px;font-weight:600;color:#534AB7;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:5px}
+.key-idea-text{font-size:14px;color:#1a1a18;line-height:1.65}
+.culture-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:1rem}
+.culture-card{background:#f5f5f3;border-radius:8px;padding:0.875rem;border-top:3px solid}
+.c1{border-color:#7F77DD}.c2{border-color:#1D9E75}.c3{border-color:#D85A30}.c4{border-color:#378ADD}
+.culture-name{font-size:13px;font-weight:600;color:#1a1a18;margin-bottom:5px}
+.culture-desc{font-size:12px;color:#5f5e5a;line-height:1.55}
+.activity-box{background:#f5f5f3;border-radius:8px;padding:1rem;margin-bottom:1rem}
+.activity-label{font-size:11px;font-weight:600;color:#0F6E56;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;display:flex;align-items:center;gap:5px}
+.activity-label i{font-size:14px}
+.activity-q{font-size:14px;color:#1a1a18;line-height:1.6;margin-bottom:5px}
+.think-prompt{font-size:13px;color:#6b6b68;font-style:italic}
+.debate-cards{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:1rem}
+.debate-card{border-radius:8px;padding:0.875rem 0.75rem;text-align:center;cursor:pointer;border:2px solid transparent;transition:all 0.15s}
+.debate-card.d-yes{background:#E1F5EE}.debate-card.d-no{background:#FAECE7}.debate-card.d-maybe{background:#EEEDFE}
+.debate-card.selected.d-yes{border-color:#1D9E75}.debate-card.selected.d-no{border-color:#D85A30}.debate-card.selected.d-maybe{border-color:#7F77DD}
+.debate-label{font-size:12px;font-weight:600;margin-bottom:4px}
+.debate-card.d-yes .debate-label{color:#085041}.debate-card.d-no .debate-label{color:#712B13}.debate-card.d-maybe .debate-label{color:#3C3489}
+.debate-desc{font-size:11px;line-height:1.45}
+.debate-card.d-yes .debate-desc{color:#0F6E56}.debate-card.d-no .debate-desc{color:#993C1D}.debate-card.d-maybe .debate-desc{color:#534AB7}
+.video-block{background:#f5f5f3;border:1px solid #e0dfd8;border-radius:8px;padding:0.875rem 1rem;margin-bottom:1rem;display:flex;align-items:center;gap:12px;text-decoration:none}
+.video-icon{width:36px;height:36px;border-radius:8px;background:#FAECE7;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.video-icon i{font-size:18px;color:#D85A30}
+.video-title{font-size:13px;font-weight:600;color:#1a1a18;margin-bottom:2px}
+.video-meta{font-size:12px;color:#6b6b68}
+.video-block i.ti-external-link{color:#9b9b98;font-size:16px}
+.peel-box{background:#fff;border:1px solid #e0dfd8;border-radius:8px;padding:1rem;margin-top:10px}
+.peel-row{display:flex;gap:10px;align-items:flex-start;margin-bottom:10px}
+.peel-row:last-child{margin-bottom:0}
+.peel-letter{width:30px;height:30px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex-shrink:0}
+.peel-name{font-size:13px;font-weight:600;color:#1a1a18;margin-bottom:2px}
+.peel-hint{font-size:12px;color:#6b6b68;line-height:1.5}
+.complete-btn{width:100%;padding:11px;border-radius:8px;border:1px solid #e0dfd8;background:#fff;font-size:13px;font-weight:600;color:#6b6b68;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;transition:all 0.15s;margin-top:8px}
+.complete-btn:hover{background:#f5f5f3}
+.complete-btn.done{background:#E1F5EE;border-color:#5DCAA5;color:#085041}
+.form-box{background:#fff;border:1px solid #e0dfd8;border-radius:10px;padding:1rem 1.25rem;display:flex;align-items:center;gap:12px}
+.form-icon{width:38px;height:38px;border-radius:8px;background:#E6F1FB;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.form-icon i{font-size:20px;color:#185FA5}
+.form-text{flex:1}
+.form-title{font-size:13px;font-weight:600;color:#1a1a18;margin-bottom:2px}
+.form-sub{font-size:12px;color:#6b6b68}
+.form-btn{font-size:12px;padding:8px 16px;border-radius:8px;background:#E6F1FB;color:#185FA5;border:none;cursor:pointer;font-weight:600;white-space:nowrap;text-decoration:none;display:inline-block}
+.form-btn:hover{background:#B5D4F4}
+@media(max-width:520px){
+  .culture-grid{grid-template-columns:1fr}
+  .debate-cards{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div class="page">
 
+  <div class="relief-banner">
+    <i class="ti ti-info-circle"></i>
+    <div>
+      <p class="relief-label">Note for relief teacher</p>
+      <p class="relief-text">Thank you for covering this class. Please read the following aloud to students, then they work independently for the remainder of the lesson.<br><br>
+      <strong>"Today you are working through a self-directed lesson on your laptop. Read each section carefully, watch the short video, and complete the activities. At the end, submit your work using the Google Form link at the bottom. You have the full lesson — work at your own pace and put your hand up if you need help."</strong></p>
+    </div>
+  </div>
+
+  <div class="top-bar">
+    <div class="top-icon"><i class="ti ti-world"></i></div>
+    <div>
+      <p class="top-title">Is adolescence universal?</p>
+      <p class="top-sub">Year 11 Society & Culture · Week 1, Lesson 3 · Self-directed</p>
+    </div>
+  </div>
+
+  <div class="progress-row">
+    <div class="prog-step active" id="p1"></div>
+    <div class="prog-step" id="p2"></div>
+    <div class="prog-step" id="p3"></div>
+    <div class="prog-step" id="p4"></div>
+    <div class="prog-step" id="p5"></div>
+  </div>
+
+  <div class="section-card s1">
+    <div class="section-header">
+      <div class="section-num">1</div>
+      <p class="section-title">Start here — what do you already think?</p>
+      <span class="section-time"><i class="ti ti-clock"></i> 5 min</span>
+    </div>
+    <div class="section-body">
+      <p class="prose">Before we get into the content, think about this question:</p>
+      <div class="key-idea">
+        <p class="key-idea-label">Big question</p>
+        <p class="key-idea-text">Do you think every culture in the world has a stage of life called "adolescence" — or is it something specific to certain societies?</p>
+      </div>
+      <div class="debate-cards">
+        <div class="debate-card d-yes" onclick="selectDebate(this)">
+          <p class="debate-label">Yes, universal</p>
+          <p class="debate-desc">Every culture has a teenage stage between childhood and adulthood</p>
+        </div>
+        <div class="debate-card d-no" onclick="selectDebate(this)">
+          <p class="debate-label">No, it varies</p>
+          <p class="debate-desc">Different cultures handle the transition to adulthood very differently</p>
+        </div>
+        <div class="debate-card d-maybe" onclick="selectDebate(this)">
+          <p class="debate-label">Not sure yet</p>
+          <p class="debate-desc">I want to see what the evidence says before I decide</p>
+        </div>
+      </div>
+      <p class="prose" style="font-size:13px;color:#6b6b68">Remember your answer — you will revisit it at the end of the lesson.</p>
+      <button class="complete-btn" id="btn1" onclick="markDone(1)"><i class="ti ti-check"></i> Mark section complete</button>
+    </div>
+  </div>
+
+  <div class="section-card s2">
+    <div class="section-header">
+      <div class="section-num">2</div>
+      <p class="section-title">What is adolescence? The Western idea</p>
+      <span class="section-time"><i class="ti ti-clock"></i> 10 min</span>
+    </div>
+    <div class="section-body">
+      <p class="prose">In most Western societies, adolescence is seen as a distinct stage of life — roughly ages 12 to 18 — where a person is no longer a child but not yet fully an adult. It is associated with identity exploration, increased independence, peer relationships, and emotional change.</p>
+      <div class="key-idea">
+        <p class="key-idea-label">Key idea</p>
+        <p class="key-idea-text">A social construct is something that exists because a society agrees it exists — not because it is biologically inevitable. Last lesson we discussed how identity is socially constructed. Today the question is: is adolescence itself a social construct?</p>
+      </div>
+      <p class="prose">The concept of adolescence as we know it is relatively recent. Before the 20th century in Western societies, children often moved directly into adult roles — working, marrying, taking on responsibilities — with no recognised "in between" stage.</p>
+      <p class="prose">Psychologist G. Stanley Hall was the first to formally define adolescence as a developmental stage in 1904. Since then it has become a central part of Western culture — but is it universal?</p>
+      <div class="activity-box">
+        <p class="activity-label"><i class="ti ti-pencil"></i> Think about it</p>
+        <p class="activity-q">Can you think of a moment in your own life where you were treated "in between" — not quite a child, not quite an adult? What was that like?</p>
+        <p class="think-prompt">Keep this in mind for the Google Form at the end.</p>
+      </div>
+      <button class="complete-btn" id="btn2" onclick="markDone(2)"><i class="ti ti-check"></i> Mark section complete</button>
+    </div>
+  </div>
+
+  <div class="section-card s3">
+    <div class="section-header">
+      <div class="section-num">3</div>
+      <p class="section-title">Adolescence across cultures — four examples</p>
+      <span class="section-time"><i class="ti ti-clock"></i> 15 min</span>
+    </div>
+    <div class="section-body">
+      <p class="prose">Read each of the four cultural examples below. For each one, think about whether it fits the Western idea of adolescence — or challenges it.</p>
+      <div class="culture-grid">
+        <div class="culture-card c1">
+          <p class="culture-name">Indigenous Australian — initiation</p>
+          <p class="culture-desc">In many Aboriginal cultures, the transition from childhood to adulthood is marked by specific ceremonies and initiations — not a prolonged "in between" stage. Adult responsibilities and knowledge are conferred at a defined point, often in early adolescence.</p>
+        </div>
+        <div class="culture-card c2">
+          <p class="culture-name">Japan — Seijin-no-Hi</p>
+          <p class="culture-desc">Coming of Age Day (成人の日) marks the transition to adulthood at age 20 with a national ceremony. Young people dress in traditional clothing and are officially welcomed into adult society — a clear cultural marker rather than a gradual transition.</p>
+        </div>
+        <div class="culture-card c3">
+          <p class="culture-name">Amish — Rumspringa</p>
+          <p class="culture-desc">Amish teenagers enter a period called Rumspringa (roughly ages 14–21) where they are permitted to explore the outside world before choosing whether to be baptised into the Amish church. A sanctioned period of exploration — but with a defined endpoint.</p>
+        </div>
+        <div class="culture-card c4">
+          <p class="culture-name">Rural communities globally</p>
+          <p class="culture-desc">In many rural and agricultural communities across Asia, Africa, and South America, children take on significant adult labour and family responsibilities from a young age. The Western concept of a protected, school-focused adolescence does not apply in the same way.</p>
+        </div>
+      </div>
+      <a class="video-block" href="https://www.youtube.com/results?search_query=coming+of+age+rituals+around+the+world" target="_blank">
+        <div class="video-icon"><i class="ti ti-player-play"></i></div>
+        <div style="flex:1">
+          <p class="video-title">Coming of age rituals around the world</p>
+          <p class="video-meta">Search YouTube · pick any short documentary clip (5–10 min)</p>
+        </div>
+        <i class="ti ti-external-link"></i>
+      </a>
+      <div class="activity-box">
+        <p class="activity-label"><i class="ti ti-pencil"></i> Activity — answer in the Google Form</p>
+        <p class="activity-q">Choose TWO of the four cultures above. For each one, explain: does it support or challenge the idea that adolescence is a universal stage of life? Use a specific detail from the description in your answer.</p>
+      </div>
+      <button class="complete-btn" id="btn3" onclick="markDone(3)"><i class="ti ti-check"></i> Mark section complete</button>
+    </div>
+  </div>
+
+  <div class="section-card s4">
+    <div class="section-header">
+      <div class="section-num">4</div>
+      <p class="section-title">Adolescence as a social construct — the argument</p>
+      <span class="section-time"><i class="ti ti-clock"></i> 10 min</span>
+    </div>
+    <div class="section-body">
+      <p class="prose">Now that you have looked at the four cultural examples, read the argument below carefully.</p>
+      <div class="key-idea">
+        <p class="key-idea-label">The argument</p>
+        <p class="key-idea-text">Adolescence is not a biological inevitability — it is a social construct created by Western, industrialised societies. It emerged when compulsory schooling delayed entry into the workforce, creating a prolonged period of economic dependence. Cultures without these conditions do not produce adolescence in the same form. Therefore, adolescence is culturally specific, not universal.</p>
+      </div>
+      <p class="prose">This does not mean that puberty is a social construct — biological changes at this age are universal. The argument is that the social experience of adolescence — the "in between" status, the identity exploration, the dependence on parents — is shaped by culture, not biology.</p>
+      <div class="activity-box">
+        <p class="activity-label"><i class="ti ti-pencil"></i> PEEL paragraph — answer in the Google Form</p>
+        <p class="activity-q">Write a PEEL paragraph responding to this statement: <em>"Adolescence is a Western social construct and is not valid for all cultures."</em></p>
+        <div class="peel-box">
+          <div class="peel-row">
+            <div class="peel-letter" style="background:#EEEDFE;color:#3C3489">P</div>
+            <div>
+              <p class="peel-name">Point</p>
+              <p class="peel-hint">Do you agree, disagree, or partly agree? State your position clearly in one sentence.</p>
+            </div>
+          </div>
+          <div class="peel-row">
+            <div class="peel-letter" style="background:#E1F5EE;color:#085041">E</div>
+            <div>
+              <p class="peel-name">Evidence</p>
+              <p class="peel-hint">Use at least one cultural example from Section 3 to support your point.</p>
+            </div>
+          </div>
+          <div class="peel-row">
+            <div class="peel-letter" style="background:#FAECE7;color:#712B13">E</div>
+            <div>
+              <p class="peel-name">Explain</p>
+              <p class="peel-hint">How does your evidence prove your point? Make the connection explicit.</p>
+            </div>
+          </div>
+          <div class="peel-row">
+            <div class="peel-letter" style="background:#E6F1FB;color:#0C447C">L</div>
+            <div>
+              <p class="peel-name">Link</p>
+              <p class="peel-hint">Connect back to the statement — is adolescence a valid concept for all cultures?</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="complete-btn" id="btn4" onclick="markDone(4)"><i class="ti ti-check"></i> Mark section complete</button>
+    </div>
+  </div>
+
+  <div class="section-card s5">
+    <div class="section-header">
+      <div class="section-num">5</div>
+      <p class="section-title">Reflection and submit your work</p>
+      <span class="section-time"><i class="ti ti-clock"></i> 10 min</span>
+    </div>
+    <div class="section-body">
+      <p class="prose">Go back to the question from Section 1 — do you still hold the same position, or has the content changed your thinking?</p>
+      <div class="activity-box" style="margin-bottom:1rem">
+        <p class="activity-label"><i class="ti ti-pencil"></i> Final reflection — answer in the Google Form</p>
+        <p class="activity-q">1. Has your answer to the opening question changed? Why or why not?</p>
+        <p class="activity-q" style="margin-top:8px">2. What is one thing from today that connected to your own experience or background?</p>
+      </div>
+      <p class="prose">Once you have your answers ready, click below to open the Google Form and submit everything.</p>
+      <div class="form-box">
+        <div class="form-icon"><i class="ti ti-forms"></i></div>
+        <div class="form-text">
+          <p class="form-title">Submit your work — Lesson 3</p>
+          <p class="form-sub">Paste your answers from Sections 3, 4 and 5 into the form</p>
+        </div>
+        <a class="form-btn" href="PASTE_YOUR_GOOGLE_FORM_LINK_HERE" target="_blank">Open form ↗</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+<script>
+function selectDebate(el){
+  document.querySelectorAll('.debate-card').forEach(c=>c.classList.remove('selected'));
+  el.classList.add('selected');
+}
+function markDone(n){
+  var btn=document.getElementById('btn'+n);
+  btn.classList.add('done');
+  btn.innerHTML='<i class="ti ti-circle-check"></i> Done';
+  var p=document.getElementById('p'+n);
+  if(p){p.classList.remove('active');p.classList.add('done');}
+  var next=document.getElementById('p'+(n+1));
+  if(next){next.classList.add('active');}
+}
+</script>
+</body>
+</html>
