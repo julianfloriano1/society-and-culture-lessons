@@ -1,1 +1,1 @@
-# societyandculturelessons
+# society-and-culture-lessons
