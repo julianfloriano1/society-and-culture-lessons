@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lesson 4 — Is Adolescence a Western Invention? | Year 11 Society & Culture</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.44.0/tabler-icons.min.css">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,-apple-system,sans-serif;background:#f5f5f3;color:#1a1a18;line-height:1.6}
+.page{max-width:720px;margin:0 auto;padding:2rem 1.25rem}
+
+/* HERO */
+.hero{border-radius:16px;padding:2.5rem 2rem;margin-bottom:1.5rem;background:linear-gradient(135deg,#3C3489 0%,#7F77DD 60%,#B8B4F0 100%);color:#fff;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-40px;right:-40px;width:180px;height:180px;border-radius:50%;background:rgba(255,255,255,0.07)}
+.hero::after{content:'';position:absolute;bottom:-60px;left:30%;width:220px;height:220px;border-radius:50%;background:rgba(255,255,255,0.05)}
+.hero-eyebrow{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;opacity:0.75;margin-bottom:8px}
+.hero-title{font-size:26px;font-weight:700;line-height:1.25;margin-bottom:10px}
+.hero-sub{font-size:14px;opacity:0.85;line-height:1.6;margin-bottom:1.25rem}
+.hero-tags{display:flex;flex-wrap:wrap;gap:8px}
+.hero-tag{font-size:12px;padding:4px 12px;border-radius:20px;background:rgba(255,255,255,0.15);color:#fff;border:1px solid rgba(255,255,255,0.25)}
+
+/* RELIEF BANNER */
+.relief-banner{background:#FFF8E6;border:1px solid #FAC775;border-radius:12px;padding:1rem 1.25rem;margin-bottom:1.5rem;display:flex;gap:10px;align-items:flex-start}
+.relief-banner i{color:#854F0B;font-size:20px;flex-shrink:0;margin-top:2px}
+.relief-label{font-size:11px;font-weight:600;color:#854F0B;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:4px}
+.relief-text{font-size:13px;color:#633806;line-height:1.6}
+
+/* PROGRESS */
+.progress-row{display:flex;gap:6px;margin-bottom:1.5rem;align-items:center}
+.prog-label{font-size:12px;color:#6b6b68;white-space:nowrap;margin-right:4px}
+.prog-step{flex:1;height:5px;border-radius:3px;background:#e0dfd8;transition:background 0.3s}
+.prog-step.done{background:#1D9E75}
+.prog-step.active{background:#7F77DD}
+
+/* CARDS */
+.section-card{background:#fff;border:1px solid #e0dfd8;border-radius:12px;overflow:hidden;margin-bottom:1.25rem}
+.section-header{padding:0.875rem 1.25rem;border-bottom:1px solid #e0dfd8;display:flex;align-items:center;gap:10px}
+.section-num{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;flex-shrink:0}
+.s1 .section-num{background:#EEEDFE;color:#3C3489}
+.s2 .section-num{background:#E1F5EE;color:#085041}
+.s3 .section-num{background:#FAECE7;color:#712B13}
+.s4 .section-num{background:#E6F1FB;color:#0C447C}
+.s5 .section-num{background:#FAEEDA;color:#633806}
+.s6 .section-num{background:#F3E8FB;color:#5C1F8A}
+.section-title{font-size:14px;font-weight:600;color:#1a1a18;flex:1}
+.section-time{font-size:12px;color:#9b9b98;display:flex;align-items:center;gap:4px}
+.section-body{padding:1.25rem}
+.prose{font-size:14px;color:#444441;line-height:1.75;margin-bottom:1rem}
+
+/* RECALL STRIP */
+.recall-strip{background:linear-gradient(135deg,#EEEDFE,#E6F1FB);border-radius:10px;padding:1rem 1.25rem;margin-bottom:1rem;display:flex;gap:12px;align-items:flex-start}
+.recall-icon{width:36px;height:36px;border-radius:8px;background:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.recall-icon i{font-size:18px;color:#534AB7}
+.recall-label{font-size:11px;font-weight:600;color:#3C3489;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:3px}
+.recall-text{font-size:13px;color:#3C3489;line-height:1.55}
+
+/* KEY IDEA */
+.key-idea{background:#f5f5f3;border-left:3px solid #7F77DD;padding:0.875rem 1rem;margin-bottom:1rem}
+.key-idea-label{font-size:11px;font-weight:600;color:#534AB7;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:5px}
+.key-idea-text{font-size:14px;color:#1a1a18;line-height:1.65}
+
+/* IMAGE CARDS */
+.image-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:1rem}
+.image-card{border-radius:10px;overflow:hidden;border:1px solid #e0dfd8}
+.image-card img{width:100%;height:160px;object-fit:cover;display:block}
+.image-card-body{padding:0.75rem}
+.image-card-title{font-size:13px;font-weight:600;color:#1a1a18;margin-bottom:3px}
+.image-card-desc{font-size:12px;color:#6b6b68;line-height:1.5}
+.image-card-tag{display:inline-block;font-size:10px;padding:2px 8px;border-radius:20px;margin-top:5px;font-weight:500}
+.tag-challenge{background:#FAECE7;color:#712B13}
+.tag-support{background:#E1F5EE;color:#085041}
+.tag-complex{background:#EEEDFE;color:#3C3489}
+
+/* QUOTE BLOCK */
+.quote-block{background:#1a1a18;border-radius:10px;padding:1.25rem 1.5rem;margin-bottom:1rem;position:relative}
+.quote-mark{font-size:48px;color:#7F77DD;line-height:0.8;margin-bottom:8px;display:block;font-family:Georgia,serif}
+.quote-text{font-size:15px;color:#fff;line-height:1.65;font-style:italic;margin-bottom:8px}
+.quote-source{font-size:12px;color:#9b9b98}
+
+/* CONTROVERSY GRID */
+.controversy-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:1rem}
+.controversy-card{border-radius:10px;padding:1rem;border:2px solid transparent;cursor:pointer;transition:all 0.15s}
+.cv-agree{background:#E1F5EE;border-color:#E1F5EE}
+.cv-disagree{background:#FAECE7;border-color:#FAECE7}
+.cv-partly{background:#EEEDFE;border-color:#EEEDFE;grid-column:span 2}
+.controversy-card.selected.cv-agree{border-color:#1D9E75}
+.controversy-card.selected.cv-disagree{border-color:#D85A30}
+.controversy-card.selected.cv-partly{border-color:#7F77DD}
+.cv-title{font-size:13px;font-weight:600;margin-bottom:4px}
+.cv-agree .cv-title{color:#085041}
+.cv-disagree .cv-title{color:#712B13}
+.cv-partly .cv-title{color:#3C3489}
+.cv-desc{font-size:12px;line-height:1.5}
+.cv-agree .cv-desc{color:#0F6E56}
+.cv-disagree .cv-desc{color:#993C1D}
+.cv-partly .cv-desc{color:#534AB7}
+
+/* EVIDENCE STRIPS */
+.evidence-list{display:flex;flex-direction:column;gap:8px;margin-bottom:1rem}
+.evidence-item{background:#f5f5f3;border-radius:8px;padding:0.75rem 1rem;display:flex;gap:10px;align-items:flex-start}
+.evidence-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;margin-top:5px}
+.evidence-text{font-size:13px;color:#444441;line-height:1.55}
+.evidence-source{font-size:11px;color:#9b9b98;margin-top:3px}
+
+/* VIDEO */
+.video-block{background:#f5f5f3;border:1px solid #e0dfd8;border-radius:8px;padding:0.875rem 1rem;margin-bottom:1rem;display:flex;align-items:center;gap:12px;text-decoration:none}
+.video-icon{width:36px;height:36px;border-radius:8px;background:#FAECE7;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.video-icon i{font-size:18px;color:#D85A30}
+.video-title{font-size:13px;font-weight:600;color:#1a1a18;margin-bottom:2px}
+.video-meta{font-size:12px;color:#6b6b68}
+
+/* ACTIVITY */
+.activity-box{background:#f5f5f3;border-radius:8px;padding:1rem;margin-bottom:1rem}
+.activity-label{font-size:11px;font-weight:600;color:#0F6E56;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;display:flex;align-items:center;gap:5px}
+.activity-label i{font-size:14px}
+.activity-q{font-size:14px;color:#1a1a18;line-height:1.6;margin-bottom:5px}
+.think-prompt{font-size:13px;color:#6b6b68;font-style:italic}
+
+/* PEEL */
+.peel-box{background:#fff;border:1px solid #e0dfd8;border-radius:8px;padding:1rem;margin-top:10px}
+.peel-row{display:flex;gap:10px;align-items:flex-start;margin-bottom:10px}
+.peel-row:last-child{margin-bottom:0}
+.peel-letter{width:30px;height:30px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex-shrink:0}
+.peel-name{font-size:13px;font-weight:600;color:#1a1a18;margin-bottom:2px}
+.peel-hint{font-size:12px;color:#6b6b68;line-height:1.5}
+
+/* COMPLETE BTN */
+.complete-btn{width:100%;padding:11px;border-radius:8px;border:1px solid #e0dfd8;background:#fff;font-size:13px;font-weight:600;color:#6b6b68;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;transition:all 0.15s;margin-top:8px}
+.complete-btn:hover{background:#f5f5f3}
+.complete-btn.done{background:#E1F5EE;border-color:#5DCAA5;color:#085041}
+
+/* FORM */
+.form-box{background:#fff;border:1px solid #e0dfd8;border-radius:10px;padding:1rem 1.25rem;display:flex;align-items:center;gap:12px}
+.form-icon{width:38px;height:38px;border-radius:8px;background:#E6F1FB;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.form-icon i{font-size:20px;color:#185FA5}
+.form-text{flex:1}
+.form-title{font-size:13px;font-weight:600;color:#1a1a18;margin-bottom:2px}
+.form-sub{font-size:12px;color:#6b6b68}
+.form-btn{font-size:12px;padding:8px 16px;border-radius:8px;background:#E6F1FB;color:#185FA5;border:none;cursor:pointer;font-weight:600;white-space:nowrap;text-decoration:none;display:inline-block}
+.form-btn:hover{background:#B5D4F4}
+
+/* STAT CARDS */
+.stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:1rem}
+.stat-card{background:#f5f5f3;border-radius:10px;padding:0.875rem;text-align:center}
+.stat-num{font-size:24px;font-weight:700;margin-bottom:2px}
+.stat-label{font-size:11px;color:#6b6b68;line-height:1.4}
+
+@media(max-width:520px){
+  .image-grid{grid-template-columns:1fr}
+  .controversy-grid{grid-template-columns:1fr}
+  .cv-partly{grid-column:span 1}
+  .stat-row{grid-template-columns:1fr}
+  .hero-title{font-size:20px}
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HERO -->
+  <div class="hero">
+    <p class="hero-eyebrow">Year 11 Society & Culture · Week 1, Lesson 4 · Self-directed</p>
+    <h1 class="hero-title">"Adolescence is a Western invention" — agree or disagree?</h1>
+    <p class="hero-sub">Today you will look at the evidence, form a position, and write your argument. Your casual teacher is here if you need help — otherwise work through each section at your own pace.</p>
+    <div class="hero-tags">
+      <span class="hero-tag"><i class="ti ti-clock"></i> 60 minutes</span>
+      <span class="hero-tag"><i class="ti ti-sections"></i> 5 sections</span>
+      <span class="hero-tag"><i class="ti ti-forms"></i> Submit at the end</span>
+    </div>
+  </div>
+
+  <!-- RELIEF BANNER -->
+  <div class="relief-banner">
+    <i class="ti ti-info-circle"></i>
+    <div>
+      <p class="relief-label">Note for casual teacher</p>
+      <p class="relief-text">Thank you for covering this class. Please read the following aloud to students then step back — they work independently through this page.<br><br>
+      <strong>"Last lesson you looked at how different cultures experience adolescence. Today you are going to form your own argument about whether adolescence is universal or a Western construct. Work through each section on your laptop. At the end, submit your work using the Google Form link at the bottom. You have the full lesson."</strong></p>
+    </div>
+  </div>
+
+  <!-- PROGRESS -->
+  <div class="progress-row">
+    <span class="prog-label">Progress</span>
+    <div class="prog-step active" id="p1"></div>
+    <div class="prog-step" id="p2"></div>
+    <div class="prog-step" id="p3"></div>
+    <div class="prog-step" id="p4"></div>
+    <div class="prog-step" id="p5"></div>
+  </div>
+
+  <!-- SECTION 1 — RECALL -->
+  <div class="section-card s1">
+    <div class="section-header">
+      <div class="section-num">1</div>
+      <p class="section-title">Recall — what did we find last lesson?</p>
+      <span class="section-time"><i class="ti ti-clock"></i> 8 min</span>
+    </div>
+    <div class="section-body">
+      <div class="recall-strip">
+        <div class="recall-icon"><i class="ti ti-refresh"></i></div>
+        <div>
+          <p class="recall-label">Last lesson recap</p>
+          <p class="recall-text">In Lesson 3 you explored how four different cultures experience the transition from childhood to adulthood — Aboriginal initiation, Japanese Seijin-no-Hi, Amish Rumspringa, and rural communities globally. Today we use that knowledge to build an argument.</p>
+        </div>
+      </div>
+      <p class="prose">Before we get into new content, look at these numbers:</p>
+      <div class="stat-row">
+        <div class="stat-card">
+          <p class="stat-num" style="color:#7F77DD">1904</p>
+          <p class="stat-label">Year G. Stanley Hall first defined "adolescence"</p>
+        </div>
+        <div class="stat-card">
+          <p class="stat-num" style="color:#1D9E75">195+</p>
+          <p class="stat-label">Countries in the world — most without the same concept</p>
+        </div>
+        <div class="stat-card">
+          <p class="stat-num" style="color:#D85A30">~120</p>
+          <p class="stat-label">Years the Western idea of adolescence has existed</p>
+        </div>
+      </div>
+      <div class="activity-box">
+        <p class="activity-label"><i class="ti ti-message"></i> Quick think</p>
+        <p class="activity-q">Looking at those numbers — what strikes you? What do they suggest about how "universal" adolescence really is?</p>
+        <p class="think-prompt">No need to write this down — just get your brain warmed up.</p>
+      </div>
+      <button class="complete-btn" id="btn1" onclick="markDone(1)"><i class="ti ti-check"></i> Mark section complete</button>
+    </div>
+  </div>
+
+  <!-- SECTION 2 — THE DEBATE -->
+  <div class="section-card s2">
+    <div class="section-header">
+      <div class="section-num">2</div>
+      <p class="section-title">The structured controversy — two sides</p>
+      <span class="section-time"><i class="ti ti-clock"></i> 12 min</span>
+    </div>
+    <div class="section-body">
+      <p class="prose">Read both sides of the argument carefully. You will use this evidence in your PEEL paragraph later.</p>
+
+      <div class="quote-block">
+        <span class="quote-mark">"</span>
+        <p class="quote-text">Adolescence is not a biological fact. It is a social space created by industrialised societies that needed to keep young people in school and out of the workforce.</p>
+        <p class="quote-source">— Paraphrased from sociological critiques of Western developmental theory</p>
+      </div>
+
+      <p class="prose" style="font-weight:600;color:#D85A30;font-size:13px;text-transform:uppercase;letter-spacing:0.04em">Side A — Adolescence IS a Western construct</p>
+      <div class="evidence-list">
+        <div class="evidence-item">
+          <div class="evidence-dot" style="background:#D85A30"></div>
+          <div>
+            <p class="evidence-text">The concept was formally invented in 1904 by G. Stanley Hall — it does not appear in most pre-industrial or non-Western societies in the same form.</p>
+          </div>
+        </div>
+        <div class="evidence-item">
+          <div class="evidence-dot" style="background:#D85A30"></div>
+          <div>
+            <p class="evidence-text">Compulsory schooling created the conditions for adolescence — when children worked alongside adults, there was no "in between" stage.</p>
+          </div>
+        </div>
+        <div class="evidence-item">
+          <div class="evidence-dot" style="background:#D85A30"></div>
+          <div>
+            <p class="evidence-text">In many Aboriginal Australian cultures, initiation ceremonies mark a clear transition to adulthood — there is no prolonged identity exploration period.</p>
+          </div>
+        </div>
+        <div class="evidence-item">
+          <div class="evidence-dot" style="background:#D85A30"></div>
+          <div>
+            <p class="evidence-text">In rural communities across Asia and Africa, young people take on adult economic responsibilities from an early age — the protected teenage years do not exist.</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="prose" style="font-weight:600;color:#1D9E75;font-size:13px;text-transform:uppercase;letter-spacing:0.04em;margin-top:1rem">Side B — Adolescence IS universal in some form</p>
+      <div class="evidence-list">
+        <div class="evidence-item">
+          <div class="evidence-dot" style="background:#1D9E75"></div>
+          <div>
+            <p class="evidence-text">Puberty is a biological universal — every culture must find a way to manage the transition from child to adult body, even if they do it differently.</p>
+          </div>
+        </div>
+        <div class="evidence-item">
+          <div class="evidence-dot" style="background:#1D9E75"></div>
+          <div>
+            <p class="evidence-text">Amish Rumspringa shows that even non-Western, non-industrialised cultures recognise a transitional period of exploration before full adult commitment.</p>
+          </div>
+        </div>
+        <div class="evidence-item">
+          <div class="evidence-dot" style="background:#1D9E75"></div>
+          <div>
+            <p class="evidence-text">Japanese Seijin-no-Hi suggests all cultures mark the moment of becoming adult — the form differs but the recognition of transition is universal.</p>
+          </div>
+        </div>
+        <div class="evidence-item">
+          <div class="evidence-dot" style="background:#1D9E75"></div>
+          <div>
+            <p class="evidence-text">Neuroscience shows the adolescent brain is genuinely distinct — the prefrontal cortex is still developing until the mid-20s regardless of culture.</p>
+          </div>
+        </div>
+      </div>
+      <button class="complete-btn" id="btn2" onclick="markDone(2)"><i class="ti ti-check"></i> Mark section complete</button>
+    </div>
+  </div>
+
+  <!-- SECTION 3 — IMAGES -->
+  <div class="section-card s3">
+    <div class="section-header">
+      <div class="section-num">3</div>
+      <p class="section-title">See it — growing up around the world</p>
+      <span class="section-time"><i class="ti ti-clock"></i> 8 min</span>
+    </div>
+    <div class="section-body">
+      <p class="prose">Look at each image below. For each one think about which side of the argument it supports — and why.</p>
+      <div class="image-grid">
+        <div class="image-card">
+          <img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600&q=80" alt="Traditional Japanese ceremony with kimono" loading="lazy">
+          <div class="image-card-body">
+            <p class="image-card-title">Seijin-no-Hi, Japan</p>
+            <p class="image-card-desc">Young adults in formal kimono at the national Coming of Age ceremony — a clear, defined cultural marker.</p>
+            <span class="image-card-tag tag-complex">Supports both sides</span>
+          </div>
+        </div>
+        <div class="image-card">
+          <img src="https://images.unsplash.com/photo-1497486751825-1233686d5d80?w=600&q=80" alt="Students in classroom" loading="lazy">
+          <div class="image-card-body">
+            <p class="image-card-title">Compulsory schooling, West</p>
+            <p class="image-card-desc">School keeps young people economically dependent — the condition that created the Western idea of adolescence.</p>
+            <span class="image-card-tag tag-challenge">Challenges universality</span>
+          </div>
+        </div>
+        <div class="image-card">
+          <img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=600&q=80" alt="Young person working in a field" loading="lazy">
+          <div class="image-card-body">
+            <p class="image-card-title">Youth labour, rural communities</p>
+            <p class="image-card-desc">In many parts of the world young people work alongside adults from an early age — no protected teenage years.</p>
+            <span class="image-card-tag tag-challenge">Challenges universality</span>
+          </div>
+        </div>
+        <div class="image-card">
+          <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&q=80" alt="Group of teenagers together" loading="lazy">
+          <div class="image-card-body">
+            <p class="image-card-title">Peer culture, global teens</p>
+            <p class="image-card-desc">Social media and global youth culture mean teenagers worldwide increasingly share similar experiences — is adolescence becoming more universal?</p>
+            <span class="image-card-tag tag-support">Supports universality</span>
+          </div>
+        </div>
+      </div>
+      <a class="video-block" href="https://www.youtube.com/results?search_query=is+adolescence+a+social+construct+documentary" target="_blank">
+        <div class="video-icon"><i class="ti ti-player-play"></i></div>
+        <div style="flex:1">
+          <p class="video-title">Is adolescence a social construct?</p>
+          <p class="video-meta">Search YouTube · pick a short clip (5 min max) · optional but recommended</p>
+        </div>
+        <i class="ti ti-external-link" style="color:#9b9b98;font-size:16px"></i>
+      </a>
+      <button class="complete-btn" id="btn3" onclick="markDone(3)"><i class="ti ti-check"></i> Mark section complete</button>
+    </div>
+  </div>
+
+  <!-- SECTION 4 — PEEL -->
+  <div class="section-card s4">
+    <div class="section-header">
+      <div class="section-num">4</div>
+      <p class="section-title">Form your argument — PEEL paragraph</p>
+      <span class="section-time"><i class="ti ti-clock"></i> 15 min</span>
+    </div>
+    <div class="section-body">
+      <p class="prose">Now it is time to pick your position and build your argument. First — where do you stand?</p>
+      <div class="controversy-grid">
+        <div class="controversy-card cv-agree" onclick="selectPosition(this)">
+          <p class="cv-title">I agree — it is a Western construct</p>
+          <p class="cv-desc">The evidence shows adolescence was invented by industrialised societies and does not apply universally</p>
+        </div>
+        <div class="controversy-card cv-disagree" onclick="selectPosition(this)">
+          <p class="cv-title">I disagree — it is universal</p>
+          <p class="cv-desc">All cultures must manage the transition to adulthood — adolescence exists everywhere, just in different forms</p>
+        </div>
+        <div class="controversy-card cv-partly" onclick="selectPosition(this)">
+          <p class="cv-title">I partly agree — the biological transition is universal, but the social experience of adolescence is not</p>
+          <p class="cv-desc">Puberty happens everywhere but the "in between" social status, identity exploration, and economic dependence are specific to Western industrialised societies</p>
+        </div>
+      </div>
+      <div class="activity-box">
+        <p class="activity-label"><i class="ti ti-pencil"></i> PEEL paragraph — type your answer into the Google Form</p>
+        <p class="activity-q">Write a PEEL paragraph responding to: <em>"Adolescence is a Western social construct and is not valid for all cultures."</em></p>
+        <div class="peel-box">
+          <div class="peel-row">
+            <div class="peel-letter" style="background:#EEEDFE;color:#3C3489">P</div>
+            <div>
+              <p class="peel-name">Point</p>
+              <p class="peel-hint">State your position clearly — agree, disagree, or partly agree. One sentence.</p>
+            </div>
+          </div>
+          <div class="peel-row">
+            <div class="peel-letter" style="background:#E1F5EE;color:#085041">E</div>
+            <div>
+              <p class="peel-name">Evidence</p>
+              <p class="peel-hint">Use at least ONE piece of evidence from Section 2 or a cultural example from Lesson 3.</p>
+            </div>
+          </div>
+          <div class="peel-row">
+            <div class="peel-letter" style="background:#FAECE7;color:#712B13">E</div>
+            <div>
+              <p class="peel-name">Explain</p>
+              <p class="peel-hint">How does your evidence prove your point? Don't just describe it — connect it to your argument.</p>
+            </div>
+          </div>
+          <div class="peel-row">
+            <div class="peel-letter" style="background:#E6F1FB;color:#0C447C">L</div>
+            <div>
+              <p class="peel-name">Link</p>
+              <p class="peel-hint">Return to the statement — is adolescence a valid concept for all cultures?</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="complete-btn" id="btn4" onclick="markDone(4)"><i class="ti ti-check"></i> Mark section complete</button>
+    </div>
+  </div>
+
+  <!-- SECTION 5 — REFLECTION + SUBMIT -->
+  <div class="section-card s5">
+    <div class="section-header">
+      <div class="section-num">5</div>
+      <p class="section-title">Reflection and submit</p>
+      <span class="section-time"><i class="ti ti-clock"></i> 10 min</span>
+    </div>
+    <div class="section-body">
+      <p class="prose">Almost done. Before you submit, take a moment to reflect on both lessons together.</p>
+      <div class="activity-box" style="margin-bottom:1rem">
+        <p class="activity-label"><i class="ti ti-pencil"></i> Short reflection — type your answers into the Google Form</p>
+        <p class="activity-q">1. Across Lessons 3 and 4, which cultural example most challenged how you think about growing up — and why?</p>
+        <p class="activity-q" style="margin-top:10px">2. Do you think the concept of adolescence is becoming more universal because of social media and global culture — or less relevant because of what we now know about cultural difference? Explain your thinking in 3–4 sentences.</p>
+      </div>
+      <p class="prose">Once your PEEL paragraph and reflection are ready, click below to submit.</p>
+      <div class="form-box">
+        <div class="form-icon"><i class="ti ti-forms"></i></div>
+        <div class="form-text">
+          <p class="form-title">Submit your work — Lesson 4</p>
+          <p class="form-sub">PEEL paragraph + reflection questions</p>
+        </div>
+        <a class="form-btn" href="PASTE_YOUR_GOOGLE_FORM_LINK_HERE" target="_blank">Open form ↗</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+<script>
+function selectPosition(el){
+  document.querySelectorAll('.controversy-card').forEach(c=>c.classList.remove('selected'));
+  el.classList.add('selected');
+}
+function markDone(n){
+  var btn=document.getElementById('btn'+n);
+  btn.classList.add('done');
+  btn.innerHTML='<i class="ti ti-circle-check"></i> Done';
+  var p=document.getElementById('p'+n);
+  if(p){p.classList.remove('active');p.classList.add('done');}
+  var next=document.getElementById('p'+(n+1));
+  if(next){next.classList.add('active');}
+}
+</script>
+</body>
+</html>
